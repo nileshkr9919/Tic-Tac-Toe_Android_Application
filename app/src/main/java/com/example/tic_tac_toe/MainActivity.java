@@ -2,6 +2,7 @@ package com.example.tic_tac_toe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -138,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
     public void updateValue(int row, int col, boolean p) {
         Button b=(Button)findViewById(board[row][col]);
         b.setEnabled(false);
+        b.setBackgroundResource(R.drawable.button_background);
         b.setText(p?"X": "O");
         boardStatus[row][col]=p?1:0;
     }
